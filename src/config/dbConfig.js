@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
 
-export default async function conectarAoBanco(stringConexao) {
+export default async function conectarAoBanco(STRING_CONEXAO) {
   let mongoClient;
 
   try {
-      mongoClient = new MongoClient(stringConexao);
+      mongoClient = new MongoClient(STRING_CONEXAO);
       console.log('Conectando ao cluster do banco de dados...');
       await mongoClient.connect();
       console.log('Conectado ao MongoDB Atlas com sucesso!');
